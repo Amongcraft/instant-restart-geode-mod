@@ -1,6 +1,5 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PauseLayer.hpp>
-#include <Geode/modify/PlayLayer.hpp>
 
 using namespace geode::prelude;
 
@@ -51,12 +50,5 @@ class $modify(MyPauseLayer, PauseLayer) {
         if (auto playLayer = PlayLayer::get()) {
             playLayer->resetLevel();
         }
-    }
-};
-
-class $modify(MyPlayLayer, PlayLayer) {
-    void resetLevel() {
-        PlayLayer::resetLevel();
-        this->m_levelSettings->m_respawnTime = 0.001f;
     }
 };
