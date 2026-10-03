@@ -8,5 +8,5 @@
 	"name": "Instant Restart",
 	"version": "v1.0.0",
 	"developer": "onyarmun",
-	"description": "Adds an instant restart button to the pause menu with near-zero respawn delay."
+	"description": "Adds an instant restart button to the pause menu."
 }
