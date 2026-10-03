@@ -54,10 +54,9 @@ class $modify(MyPauseLayer, PauseLayer) {
     }
 };
 
-// Hook PlayLayer for 2.2081 instant respawn handling
 class $modify(MyPlayLayer, PlayLayer) {
-    void delayedResetLevel() {
-        // Skips the post-death delay timer on 2.2081 completely
+    void resetLevel() {
         PlayLayer::resetLevel();
+        this->m_levelSettings->m_respawnTime = 0.001f;
     }
 };
